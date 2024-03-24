@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smoot"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              spacing: {
+                13:'50px'
+              },
+              fontFamily:{
+                aclonica: 'Aclonica'
+              },
+              animation: {
+                'spin-slow':'spin 10s linear infinite',
+                'geter': 'geter 3s infinite'
+              },
+              Keyframes: {
+                geter: {
+                  '0%, 100%' : { transform: ' translatex(-50px)'},
+                  '50%' : { transform: ' translatex(50px)' },
+                },
+              }
+              
+            }
+          }
+        }
+        </script>
+      <style type="text/tailwindcss">
+        #darkModeToggle:checked ~ label div.toggle-circle {
+          @apply translate-x-4 transition-transform;
+        }
+      </style>
+</head>
+<body class="h-[2000vh] dark:bg-slate-900 dark:text-slate-200">
+
+    <h1 class="font-[900] text-center text-7xl pt-7 pb-14 bg-gradient-to-t from-gray-900 to-gray-0 dark:bg-gradient-to-b dark:bg-green-400">
+      <span class="bg-gradient-to-t from-gray-700 to-gray-900 bg-clip-text text-transparent dark:from-black ">Belajar TailwindCSS</span>
+    </h1>
+    
+    <section class="font-bold text-center mb-10 text-green-400 bg-slate-400 ">
+        <h2 class="px-13  bg-slate-900 underline">Spacing</h2>
+        <div class="mx-[10vw] text-black bg-green-300">Margin</div>
+        <div class="pt-5 pb-7 bg-gray-800">padding</div>
+    </section>
+
+    <section class="mb-10 w-1/2 bg-slate-400">
+      <h2>sizing</h2>
+      <div class="w-9/12 bg-slate-600">kotak 1</div>
+    </section>
+    
+    <section class="mb-10 w-1/2 bg-slate-400">
+      <h2>sizing</h2>
+      <div class="w-32 h-32 bg-slate-600">kotak 1</div>
+      <div class="max-w-xs">kotak 2</div>
+    </section>
+
+    <section class="mt-60 m-auto p-10 ">
+      <h1 class="text-gray-700 text-10 font-aclonica font-bold text-4xl dark:text-gray-300">Belajar Typography TailwindCSS</h1>
+      <div class="mt-2 ml-2 mb-4 font-lg text-gray-800 font-semibold dark:text-gray-400">By <a href="" class="text-black underline dark:text-gray-50">Muhammad Firmansyah</a>, 22 March 2024</div>
+      <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ullam dolore ipsam iste eligendi soluta distinctio cumque. Architecto doloribus accusantium temporibus porro alias accusamus, dolore, rem quam minima facere libero?</p>
+      <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolore aspernatur <q class=" text-[16px] font-serif text-gray-500 italic font-bold"> animi. Iure perspiciatis excepturi maiores autem alias, enim aut. Dolor eos incidunt est voluptate tempore quisquam obcaecati odio animi</q> perspiciatis aliquam id blanditiis, iusto soluta cumque debitis accusamus culpa?</p>
+      <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed hic neque ducimus!</p>
+    </section>
+
+    /* backgrount attachment
+    bg-fixed > img scroll if vh scroll
+    bg-scroll > scroll text
+    bg-local > scroll all*/
+    <div class=" bg-black max-w-xl h-96 mx-auto mt-[42px] text-gray-500 overflow-y-scroll bg-fixed" style="background-image:url('https://source.unsplash.com/1000x600?personal+computer');"><p class="backdrop-grayscale-[9]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nisi quaerat dolore! Laboriosam nesciunt quos quidem quas nam officiis voluptas libero facere odit, non rem sit. Nostrum fugiat eaque iure dolorum esse maxime optio ea quis consectetur. Tenetur maiores accusantium sapiente quia dolor explicabo autem quo temporibus facilis ab. Tempore architecto repellat nihil pariatur ut, sed nam ullam labore obcaecati quibusdam, ipsum incidunt magni libero ex dolor similique quos hic quo illo numquam distinctio nisi ducimus esse placeat! A impedit repudiandae suscipit iste magnam iusto perferendis similique dolor animi quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus vel quidem error laudantium. Voluptas, non consectetur voluptatum quibusdam illum aut ratione culpa fugit, possimus quas enim amet quos maxime, placeat Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda labore quisquam nisi perferendis doloremque! Optio, officiis voluptate atque maiores voluptates illum sit nemo consectetur ipsa dolorum ullam dolores est provident eveniet eligendi libero. Magnam excepturi unde exercitationem pariatur illum veritatis accusamus non, atque error quidem at culpa, tenetur numquam dicta? Quia ea asperiores voluptate ipsa ullam quam, id nam illo possimus consequatur voluptatum quo impedit magni fugit, fugiat reiciendis facere quidem consectetur similique, sint dolorem in! Repellendus ex dolores labore esse. Eius, illum alias, beatae velit rerum voluptatibus, eos architecto explicabo adipisci minima eveniet quas. Numquam officia saepe maxime cum. officiis et aliquid. Tempora, nobis suscipit? Placeat fugiat quos nisi expedita nulla harum labore id natus, perferendis nesciunt iusto cupiditate voluptas vel. Vero labore, quia illo mollitia fugiat iusto animi earum amet sed impedit incidunt voluptatem facere esse maiores doloribus quod alias sapiente voluptate magni officia? Veritatis aspernatur provident nostrum molestiae eveniet, debitis nihil tempora repellendus architecto, nesciunt sit aliquid at recusandae iste deserunt magnam voluptates! Culpa quod eaque quia.</p></div>
+
+    <div class="mx-auto mt-24 max-w-xl h-[400px] bg-purple-950 bg-contain bg-no-repeat bg-center rounded-b-full rounded-tr-full bg-top border-4 border-slate-700 shadow-2xl shadow-slate-900 opacity-100 bg-blend-lighten" style="background-image:url('/ASSETS/aniv.jpg');">
+      <div class="w-full h-full bg-stone-900 rounded-b-full rounded-tr-full mix-blend-hue"></div>
+    </div>
+    
+    <div class="mx-auto mt-24 max-w-xl h-[400px] bg-purple-950 bg-contain bg-no-repeat bg-center rounded-b-full rounded-tr-full bg-top border-4 border-slate-700 shadow-2xl shadow-slate-900 opacity-100 blur-[.5px] grayscale hover:blur-none hover:grayscale-0 transition-all" style="background-image:url('/ASSETS/aniv.jpg');"> <span class="text-white m-4 ">filter</span>
+    </div>
+
+    <div class="mx-auto mt-24 max-w-xl h-[400px] bg-purple-950/25 bg-contain bg-no-repeat bg-center border-4 border-slate-700 shadow-2xl shadow-slate-900 opacity-100 bg-blend-lighten " style="background-image:url('/ASSETS/rapsodi.jpeg');">
+      <div class="w-full h-full bg-slate-900/5 backdrop-blur-[1px]"></div>
+    </div>
+
+    <button class="bg-blue-400 m-10 rounded-full px-5 py-2 font-inter block mx-auto font-semibold text-white hover:bg-slate-800 active:bg-slate-400 focus:ring ring-slate-500 dark:bg-teal-400 dark:text-black dark:hover:bg-sky-700">Simpan</button>
+
+            <!-- Card -->
+    <div class="font-serif max-w-lg my-10 border border-slate-200 rounded-xl mx-auto  p-5 shadow-md font-inter hover:bg-slate-500 group dark:hover:bg-slate-400 dark:bg-slate-950">
+      <h5 class="text-lg mb-3 font-bold text-slate-600 group-hover:text-white dark:text-gray-50 dark:group-hover:text-gray-900">My Card</h5>
+      <p class="text-slate-600 group-hover:text-white selection:bg-gray-700 selection:text-teal-100 font-serif first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-4  dark:text-gray-300 dark:group-hover:text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quaerat labore asperior deserunt deleniti quae numquam labore vitae. Optio mollitia reprehenderit quia? Obcaecati aliquid, inventore tenetur asperiores cum nam incidunt, quas iusto laboriosam assumenda, ratione quibusdam facilis deserunt enim! Expedita, voluptatum consequatur!</p>
+    </div>
+            <!-- email -->
+    <div class="max-w-lg border-slate-300 rounded-xl shadow-lg shadow-black border mx-auto font-inter p-5 dark:bg-slate-950 dark:shadow-slate-400 ">
+    <form action="">
+      <label for="email" class="block">
+        <span class="font-extrabold block mb-1 text-gray-600 font-serif after:content-['*'] after:text-red-800 after:ml-0.5 dark:text-gray-200">Email</span>
+      <input type="email" id="email" placeholder="Masukkan Email.." class="px-3 py-[5px] placeholder-gray-400 font-semibold w-full mx-auto focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-gray-800/50 rounded invalid:text-red-500/85 invalid:focus:ring-red-950/45 invalid:focus:border-red-900 valid:focus:ring-green-600 peer dark:bg-slate-800">
+      <p class="text-sm m-1 text-red-500 invisible peer-invalid:visible">Email Tidak Valid!</p>
+       </label> 
+      </form>  
+    </div>
+
+    <div class="flex justify-center m-6">
+      <span>Light</span>
+      <input type="checkbox" id="darkModeToggle" class="absolute invisible">
+      <label for="darkModeToggle">
+        <div class="mx-4 w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer transition-all">
+          <div class="toggle-circle h-3 w-3 rounded-full bg-white"></div>
+          </div>
+        </label>
+      <span>Dark</span>
+      </div>
+
+
+      <hr class="my-20">
+
+      <!-- transition transform -->
+
+
+      <div class="h-40 w-40 bg-slate-800 mx-auto group">
+        <div class="w-40 h-40 mx-auto bg-teal-400 rounded shadow-2xl group-hover:scale-75 group-hover:rotate-45 group-hover:translate-x-16 group-hover:bg-slate-800 transition-all origin-bottom-left" ></div>
+      </div>
+      
+      <div class="mt-4 h-40 w-40 bg-slate-800 mx-auto group">
+        <div class="w-40 h-40 mx-auto bg-teal-400 rounded shadow-2xl shadow-teal-400 transition duration-1000 group-hover:rotate-180 origin-bottom-left group-hover:bg-teal-800 group-hover:shadow-teal-800 delay-100 animate-geter ease-in-out" ></div>
+      </div>
+
+      <div class="animate-pulse">
+        <div class="mt-20 w-40 h-40 mx-auto bg-teal-400 rounded shadow-2xl shadow-teal-400 animate-spin-slow" ></div>
+      </div>
+      
+      <div class="mt-20 w-40 h-40 mx-auto bg-teal-400 rounded shadow-2xl shadow-teal-400 animate-geter" ></div>
+
+      <hr class="my-7">
+      
+      <!-- layout -->
+
+      <div class="container px-8 mx-auto ">
+        <div class="border rounded-xl p-4 relative">
+          <div class="cursor-pointer w-7 h-7 bg-slate-300/40 rounded-full flex absolute left-1/2">
+            <a href="#" class="text-black m-auto text-2xl">*</a>
+          </div>
+          <img src="../ASSETS/rapsodi.jpeg" title="rapsodi" class="w-4/12 float-left mr-3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore blanditiis ab reprehenderit natus quia eligendi velit nam a commodi, rem distinctio voluptate illum asperiores incidunt dolores deleniti corporis vitae minus corrupti eos! Libero aspernatur laborum voluptatibus dignissimos, asperiores quos consequatur quas quaerat at ad eligendi corrupti praesentium voluptatum. Quos porro corporis quia praesentium sapiente fugit minima nobis ab sint reprehenderit.</p>
+        </div>
+      </div>
+    
+      <div class="container mx-auto border rounded-xl shadow-lg p-10 mt-20 px-8 columns-3 ">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+        <img src="ASSETS/aniv11.jpg" alt="" class="mb-4">
+      </div>
+
+      <hr class="my-24">
+
+      <!-- responsive -->
+
+      <div class="border h-6 w-full shadow-xl shadow-white rounded-md bg-black my-7 mb-10 text-center uppercase font-extrabold text-white after:content-['normal/defauld']
+      sm:bg-green-700 sm:after:content-['sm/small-up-660px']
+      md:bg-blue-500 md:after:content-['md/medium-up-768px']
+      lg:bg-violet-600 lg:after:content-['lg/large-up-1024px']
+      xl:bg-pink-700 xl:after:content-['xl-up-1280px']
+      2xl:bg-red-950 2xl:after:content-['2xl-up-1536']">
+    </div>
+
+
+      <div class="container px-6 max-w-md mx-auto sm:max-w-xl md:max-w-full ">
+        <h3 class="font-aclonica text-4xl font- lg:text-6xl lg:mb-7">JKT<span class="bg-gradient-to-r from-white to-red-700 bg-clip-text text-transparent">48</span></h3>
+        <img src="ASSETS/fh.jpg" alt="Flaying Hight" class="mt-4 rounded-xl shadow-xl lg:w-1/2 lg:float-left lg:mr-6">
+        <h2 class="mt-6 text-2xl font-semibold text-slate-300 lg:text-4xl lg:mt-10 lg:mb-2">Member of JKT48</h2>
+        <p class="lg:text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut hic eius voluptatum enim aliquam? Molestiae ab beatae ut. Incidunt iure commodi nostrum fugiat quidem quam nesciunt nihil, odio pariatur aperiam, dignissimos deserunt molestiae! Vero ab corporis et quaerat iure omnis non impedit commodi quis exercitationem. Facilis, odit deleniti? Ipsam, provident.</p>
+        <div class="mt-4">
+          <a href="#" class="inline-block px-5 py-4 bg-red-500 rounded-full uppercase font-bold font-serif tracking-wider ">JKT48 official</a>
+        </div>
+      </div>
+
+
+
+
+
+<script>
+    const toggle = document.getElementById('darkModeToggle')
+
+
+    // toggle.addEventListener('change', (e) => {
+    //   document.documentElement.classList.toggle('dark', e.target.checked);
+    // });
+
+    toggle.addEventListener('change', (e) => {
+  document.documentElement.classList.toggle('dark', e.target.checked);
+
+  if (e.target.checked) {
+    localStorage.setItem('darkMode', 'true');
+  } else {
+    localStorage.removeItem('darkMode');
+  }
+});
+
+// Cek apakah 'darkMode' ada di localStorage ketika halaman dimuat
+if (localStorage.getItem('darkMode')) {
+  toggle.checked = true;
+  document.documentElement.classList.add('dark');
+}
+  </script>
+
+</body>
+</html>
