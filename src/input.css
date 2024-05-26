@@ -1,0 +1,33 @@
+:root {
+    --warna-biru: 2 132 199;
+
+    --warna-tema: var(--warna-biru);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    h1 {
+       @apply text-8xl text-langit;
+       /* color: theme(colors.langit); */
+       /* background-color: theme(colors.ijo / 20%); */
+    }
+}
+
+@layer components{
+    .list{
+        @apply bg-slate-700 rounded-2xl px-10 p-3 text-base m-2 text-center text-teal-100 
+    }
+    .card-gallery{
+        @apply mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72 xl:w-96
+    }
+}
+
+@layer utilities{
+    #darkModeToggle:checked ~ label div.toggle-circle {
+        @apply translate-x-4 transition-transform;
+      }
+}

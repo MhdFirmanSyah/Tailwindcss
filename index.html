@@ -8,40 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script> 
-    tailwind.config = {
-          darkMode: 'class',
-          theme: {
-            extend: {
-              spacing: {
-                13:'50px'
-              },
-              fontFamily:{
-                aclonica: 'Aclonica'
-              },
-              animation: {
-                'spin-slow':'spin 10s linear infinite',
-                'geter': 'geter 3s infinite'
-              },
-              Keyframes: {
-                geter: {
-                  '0%, 100%' : { transform: ' translatex(-50px)'},
-                  '50%' : { transform: ' translatex(50px)' },
-                },
-              }
-              
-            }
-          }
-        }
-        </script>
-      <style type="text/tailwindcss">
-        #darkModeToggle:checked ~ label div.toggle-circle {
-          @apply translate-x-4 transition-transform;
-        }
-      </style>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="src/output.css">
+
 </head>
-<body class="h-[2000vh] dark:bg-slate-900 dark:text-slate-200">
+        <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+<body class=" dark:bg-slate-900 dark:text-slate-200">
 
     <h1 class="font-[900] text-center text-7xl pt-7 pb-14 bg-gradient-to-t from-gray-900 to-gray-0 dark:bg-gradient-to-b dark:bg-green-400">
       <span class="bg-gradient-to-t from-gray-700 to-gray-900 bg-clip-text text-transparent dark:from-black ">Belajar TailwindCSS</span>
@@ -106,6 +78,19 @@
        </label> 
       </form>  
     </div>
+    
+        <!-- tema -->
+    <div class="max-w-lg mt-5 border-slate-300 rounded-xl shadow-lg shadow-black border mx-auto font-inter p-5 dark:bg-tema/100 dark:shadow-slate-400 ">
+    <form action="">
+      <label for="email" class="block">
+        <span class="font-extrabold block mb-1 text-tema/90 font-serif after:content-['*'] after:text-red-800 after:ml-0.5 dark:text-gray-200">Email</span>
+      <input type="email" id="email" placeholder="Masukkan Email.." class="px-3 py-[5px] placeholder-tema/30 font-semibold w-full mx-auto focus:outline-none focus:ring-2 focus:border-gray-700/50 focus:ring-gray-800/50 rounded invalid:text-red-500/85 invalid:focus:ring-red-950/45 invalid:focus:border-red-900 valid:focus:ring-green-600 peer dark:bg-tema/40">
+      <p class="text-sm m-1 text-red-500 invisible peer-invalid:visible">Email Tidak Valid!</p>
+       </label> 
+      </form>  
+    </div>
+
+    <!-- Button tema -->
 
     <div class="flex justify-center m-6">
       <span>Light</span>
@@ -209,7 +194,7 @@
       <h2 class="mt-24 mb-10 text-center font-bold text-3xl text-slate-200 font-aclonica">My Gallery</h2>
 
       <div class="container mx-auto px-6 font-aclonica sm:flex sm:flex-wrap sm:gap-9 sm:justify-evenly">
-          <div class="mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72 xl:w-96">
+          <div class="card-gallery">
             <div class="rounded-md shadow-lg shadow-white overflow-hidden ">
               <img src="ASSETS/river.jpg" alt="">
             </div>
@@ -218,7 +203,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quo.</p>
             </div>
         </div>
-          <div class="mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72  xl:w-96">
+          <div class="card-gallery">
             <div class="rounded-md shadow-lg shadow-white overflow-hidden ">
               <img src="ASSETS/aniv11.jpg" alt="">
             </div>
@@ -227,7 +212,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quo.</p>
             </div>
         </div>
-          <div class="mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72  xl:w-96">
+          <div class="card-gallery">
             <div class="rounded-md shadow-lg shadow-white overflow-hidden ">
               <img src="ASSETS/aniv.jpg" alt="">
             </div>
@@ -236,7 +221,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quo.</p>
             </div>
         </div>
-          <div class="mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72  xl:w-96">
+          <div class="card-gallery">
             <div class="rounded-md shadow-lg shadow-white overflow-hidden ">
               <img src="ASSETS/rapsodi.jpeg" alt="">
             </div>
@@ -245,7 +230,7 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, quo.</p>
             </div>
         </div>
-          <div class="mb-11 shadow-sm shadow-gray-600 rounded-xl sm:w-64 md:w-80 md:mb-0 lg:w-72  xl:w-96">
+          <div class="card-gallery">
             <div class="rounded-md shadow-lg shadow-white overflow-hidden ">
               <img src="ASSETS/fh.jpg" alt="">
             </div>
@@ -274,6 +259,17 @@
         <div class=" overflow-hidden h-15 bg-slate-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] md:col-start-3 hover:scale-95 transition duration-500 delay-100"><div class="w-full h-full bg-cover bg-center bg-[url('https://source.unsplash.com/1000x600?japanese')] transition duration-1000 hover:scale-125 "></div></div>
       </div>
 
+
+
+      <h1 class="text-center m-10 rounded-2xl">Function And Directive</h1>
+
+      <ul class="m-auto w-2/3 [%>*]:bg-pink-100 [%>li:first-child]:bg-slate-200 [%>li:nth-child(3)]:bg-slate-700">
+        <li class="list">LIST</li>
+        <li class="list">LIST</li>
+        <li class="list">LIST</li>
+        <li class="list">LIST</li>
+        <li class="list">LIST</li>
+      </ul>
 
 
 
